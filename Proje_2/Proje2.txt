@@ -1,0 +1,53 @@
+[16,21,11,8,12,22] -> Merge Sort
+
+Yukarıdaki dizinin sort türüne göre aşamalarını yazınız.
+
+Aşamalar:
+	Diziyi Bölme:
+
+	İlk olarak, diziyi ortadan ikiye böleriz.
+	[16, 21, 11, 8, 12, 22]
+	Sol yarı: [16, 21, 11]
+	Sağ yarı: [8, 12, 22]
+	Her Yarıyı Tekrar Bölme:
+
+	Sol yarıyı böleriz:
+	[16, 21, 11]
+	Sol yarı: [16]
+	Sağ yarı: [21, 11]
+
+	Sağ yarıyı böleriz:
+	[21, 11]
+	Sol yarı: [21]
+	Sağ yarı: [11]
+
+	Sağ yarıyı böleriz:
+	[8, 12, 22]
+	Sol yarı: [8]
+	Sağ yarı: [12, 22]
+
+	Sağ yarıyı böleriz:[12, 22]
+	Sol yarı: [12]
+	Sağ yarı: [22]
+
+	Diziyi Birleştirerek Sıralama:
+	En küçük alt dizileri sıralarız ve birleştiririz.
+	[21] ve [11] birleştirilir ve sıralanır: [11, 21]
+	[12] ve [22] birleştirilir ve sıralanır: [12, 22]
+	Daha büyük alt dizileri sıralarız ve birleştiririz:[16] ve [11, 21]
+	 birleştirilir ve sıralanır: [11, 16, 21]
+	[8] ve [12, 22] birleştirilir ve sıralanır: [8, 12, 22]
+
+	En son olarak, iki büyük yarıyı sıralarız ve birleştiririz:
+	[11, 16, 21] ve [8, 12, 22] birleştirilir ve sıralanır: [8, 11, 12, 16, 21, 22]
+	Sonuç:
+	Sıralı dizi: [8, 11, 12, 16, 21, 22]
+
+
+Big-O gösterimini yazınız.
+	Zaman Karmaşıklığı (Time Complexity): Merge Sort algoritması, her durumda diziyi log n seviyesinde böler ve her seviyede n elemanı birleştirir. 
+	Bu nedenle, zaman karmaşıklığı her durumda O(n log n) olur.
+
+	Best Case (En iyi durum): O(n log n)
+	Average Case (Ortalama durum): O(n log n)
+	Worst Case (En kötü durum): O(n log n)
